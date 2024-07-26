@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<!-- HEAD: Configurações do HTML -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World</title>
+
+<!-- Requisitando fonte do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<!-- BODY: Tudo que aparece na página -->
+<body style="background-color: rgb(34, 12, 8);">
+
+<!--H1: Título de primeira hierarquia -->
+  <h1
+    id="id-do-nome"
+    onclick="mudarNome()"
+    style="
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      margin: 96px;
+      font-size: 96px;
+      color: antiquewhite;
+      "
+  >Hello World</h1>
+
+<!-- Código Javascript -->
+  <script>
+    // Objetivo: É alterar o texto passando um nome
+
+    function mudarNome() {
+      // Busco o elemento pelo id
+      const h1 = document.getElementById('id-do-nome');
+      // Salvo o nome recebido no prompt
+      const nome = prompt('Escreve seu nome: ');
+      // Altero a estrutura do h1 inserindo a constante nome
+      h1.textContent = `Hello ${nome}`
+    }
+  </script>
+</body>
+
+</html>
